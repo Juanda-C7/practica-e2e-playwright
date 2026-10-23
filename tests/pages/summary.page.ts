@@ -11,6 +11,7 @@ export class SummaryPage extends BasePage {
   private get total(): Locator { return this.page.getByTestId('total'); }
   private get confirmButton(): Locator { return this.page.getByTestId('confirmar'); }
 
+  async open(): Promise<void> { await super.open('/resumen.html'); }
   async expectTotals(expected: OrderTotals): Promise<void> {
     await expect(this.subtotal).toHaveText(`Q${expected.subtotal.toFixed(2)}`);
     await expect(this.discountPercent).toHaveText(String(expected.discountPercent));

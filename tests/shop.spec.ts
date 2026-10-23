@@ -81,6 +81,18 @@ test.describe('Ingreso y sesión', () => {
     await shop.login.expectLogin();
   });
 
+  for (const [route, open] of [
+    ['/catalogo', (shop: Shop) => shop.catalog.open()],
+    ['/checkout', (shop: Shop) => shop.checkout.open()],
+    ['/resumen', (shop: Shop) => shop.summary.open()],
+    ['/confirmacion', (shop: Shop) => shop.confirmation.open()]
+  ] as const) {
+    test(`Sesión — ${route} sin sesión redirige al ingreso [Transición de estados]`, async ({ shop }) => {
+      await open(shop);
+      await shop.login.expectLogin();
+    });
+  }
+
   test('Sesión — cerrar sesión vacía el carrito [Transición de estados]', async ({ shop }) => {
     await withCart(shop, [products.coffee250]);
     await shop.cart.logout();
@@ -128,6 +140,12 @@ test.describe('Catálogo', () => {
     await loginAs(shop, 'problema');
     await shop.catalog.sortBy('precio-asc');
     await expect(await shop.catalog.productPrices()).toEqual(pricesAscending);
+  });
+
+  test('Usuario problema — catálogo conserva el orden descendente por precio [Particiones de equivalencia]', async ({ shop }) => {
+    await loginAs(shop, 'problema');
+    await shop.catalog.sortBy('precio-desc');
+    await expect(await shop.catalog.productPrices()).toEqual([...pricesAscending].reverse());
   });
 });
 

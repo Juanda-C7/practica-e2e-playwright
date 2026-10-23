@@ -11,6 +11,7 @@ export class CheckoutPage extends BasePage {
   private get continueButton(): Locator { return this.page.getByTestId('continuar'); }
   private get error(): Locator { return this.page.getByTestId('error'); }
 
+  async open(): Promise<void> { await super.open('/checkout.html'); }
   async submit(data: ShippingData): Promise<void> {
     await this.firstName.fill(data.firstName);
     await this.lastName.fill(data.lastName);
