@@ -1,0 +1,23 @@
+- generic [active] [ref=f5e1]:
+  - banner [ref=f5e2]:
+    - link "Café de Altura" [ref=f5e3] [cursor=pointer]:
+      - /url: catalogo.html
+    - navigation [ref=f5e4]:
+      - link "Carrito (1)" [ref=f5e5] [cursor=pointer]:
+        - /url: carrito.html
+      - button "Cerrar sesión" [ref=f5e6] [cursor=pointer]
+  - main [ref=f5e7]:
+    - heading "Datos de envío" [level=1] [ref=f5e8]
+    - generic [ref=f5e9]:
+      - generic [ref=f5e10]: Nombre
+      - textbox "Nombre" [ref=f5e11]
+      - generic [ref=f5e12]: Apellido
+      - textbox "Apellido" [ref=f5e13]
+      - generic [ref=f5e14]: Código postal
+      - textbox "Código postal" [ref=f5e15]
+      - generic [ref=f5e16]: Cupón (opcional)
+      - textbox "Cupón (opcional)" [ref=f5e17]
+      - alert [ref=f5e18]
+      - generic [ref=f5e19]:
+        - button "Cancelar" [ref=f5e20] [cursor=pointer]
+        - button "Continuar" [ref=f5e21] [cursor=pointer]

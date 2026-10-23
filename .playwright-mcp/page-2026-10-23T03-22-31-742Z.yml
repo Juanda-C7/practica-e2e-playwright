@@ -1,0 +1,35 @@
+- generic [active] [ref=f4e1]:
+  - banner [ref=f4e2]:
+    - link "Café de Altura" [ref=f4e3] [cursor=pointer]:
+      - /url: catalogo.html
+    - navigation [ref=f4e4]:
+      - link "Carrito (1)" [ref=f4e5] [cursor=pointer]:
+        - /url: carrito.html
+      - button "Cerrar sesión" [ref=f4e6] [cursor=pointer]
+  - main [ref=f4e7]:
+    - heading "Carrito" [level=1] [ref=f4e8]
+    - table [ref=f4e9]:
+      - rowgroup [ref=f4e10]:
+        - row [ref=f4e11]:
+          - columnheader "Producto" [ref=f4e12]
+          - columnheader "Precio" [ref=f4e13]
+          - columnheader "Cantidad" [ref=f4e14]
+          - columnheader "Total" [ref=f4e15]
+          - columnheader [ref=f4e16]
+      - rowgroup [ref=f4e17]:
+        - row [ref=f4e18]:
+          - cell "Café de Huehuetenango 250 g" [ref=f4e19]
+          - cell "Q75.00" [ref=f4e20]
+          - cell [ref=f4e21]:
+            - spinbutton "Cantidad de Café de Huehuetenango 250 g" [ref=f4e22]: "1"
+          - cell "Q75.00" [ref=f4e23]
+          - cell [ref=f4e24]:
+            - button "Quitar" [ref=f4e25] [cursor=pointer]
+    - alert [ref=f4e26]
+    - paragraph [ref=f4e27]:
+      - text: "Subtotal:"
+      - strong [ref=f4e28]: Q75.00
+    - generic [ref=f4e29]:
+      - link "Seguir comprando" [ref=f4e30] [cursor=pointer]:
+        - /url: catalogo.html
+      - button "Continuar al pago" [ref=f4e31] [cursor=pointer]

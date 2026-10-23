@@ -1,0 +1,55 @@
+- generic [active] [ref=f1e1]:
+  - banner [ref=f1e2]:
+    - link "Café de Altura" [ref=f1e3] [cursor=pointer]:
+      - /url: catalogo.html
+    - navigation [ref=f1e4]:
+      - link "Carrito (0)" [ref=f1e5] [cursor=pointer]:
+        - /url: carrito.html
+      - button "Cerrar sesión" [ref=f1e6] [cursor=pointer]
+  - main [ref=f1e7]:
+    - generic [ref=f1e8]:
+      - heading "Catálogo" [level=1] [ref=f1e9]
+      - generic [ref=f1e10]:
+        - text: Ordenar por
+        - combobox "Ordenar por" [ref=f1e11]:
+          - option "Nombre (A a Z)" [selected]
+          - option "Nombre (Z a A)"
+          - option "Precio (menor a mayor)"
+          - option "Precio (mayor a menor)"
+    - generic [ref=f1e12]:
+      - article [ref=f1e13]:
+        - generic [aria-hidden] [ref=f1e14]: C
+        - heading "Café de Antigua 500 g" [level=2] [ref=f1e15]
+        - paragraph [ref=f1e16]: Grano entero, tueste oscuro.
+        - paragraph [ref=f1e17]: Q140.00
+        - button "Agregar al carrito" [ref=f1e18] [cursor=pointer]
+      - article [ref=f1e19]:
+        - generic [aria-hidden] [ref=f1e20]: C
+        - heading "Café de Huehuetenango 250 g" [level=2] [ref=f1e21]
+        - paragraph [ref=f1e22]: Grano entero, tueste medio.
+        - paragraph [ref=f1e23]: Q75.00
+        - button "Agregar al carrito" [ref=f1e24] [cursor=pointer]
+      - article [ref=f1e25]:
+        - generic [aria-hidden] [ref=f1e26]: F
+        - heading "Filtros de papel (100)" [level=2] [ref=f1e27]
+        - paragraph [ref=f1e28]: Para goteo, tamaño 4.
+        - paragraph [ref=f1e29]: Q25.00
+        - button "Agregar al carrito" [ref=f1e30] [cursor=pointer]
+      - article [ref=f1e31]:
+        - generic [aria-hidden] [ref=f1e32]: M
+        - heading "Molino manual" [level=2] [ref=f1e33]
+        - paragraph [ref=f1e34]: Muelas de cerámica ajustables.
+        - paragraph [ref=f1e35]: Q350.00
+        - button "Agregar al carrito" [ref=f1e36] [cursor=pointer]
+      - article [ref=f1e37]:
+        - generic [aria-hidden] [ref=f1e38]: P
+        - heading "Prensa francesa" [level=2] [ref=f1e39]
+        - paragraph [ref=f1e40]: Vidrio y acero, 1 litro.
+        - paragraph [ref=f1e41]: Q225.00
+        - button "Agregar al carrito" [ref=f1e42] [cursor=pointer]
+      - article [ref=f1e43]:
+        - generic [aria-hidden] [ref=f1e44]: T
+        - heading "Taza de barro" [level=2] [ref=f1e45]
+        - paragraph [ref=f1e46]: Hecha a mano, 300 ml.
+        - paragraph [ref=f1e47]: Q60.00
+        - button "Agregar al carrito" [ref=f1e48] [cursor=pointer]

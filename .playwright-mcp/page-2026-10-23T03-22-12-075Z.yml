@@ -1,0 +1,14 @@
+- main [ref=f2e2]:
+  - heading "Café de Altura" [level=1] [ref=f2e3]
+  - generic [ref=f2e4]:
+    - generic [ref=f2e5]: Usuario
+    - textbox "Usuario" [ref=f2e6]
+    - generic [ref=f2e7]: Contraseña
+    - textbox "Contraseña" [ref=f2e8]
+    - alert [ref=f2e9]
+    - button "Ingresar" [ref=f2e10] [cursor=pointer]
+  - generic [ref=f2e11]:
+    - heading "Usuarios de prueba" [level=2] [ref=f2e12]
+    - paragraph [ref=f2e13]: estandar, bloqueado, problema, lento
+    - heading "Contraseña de todos" [level=2] [ref=f2e14]
+    - paragraph [ref=f2e15]: calidad2026

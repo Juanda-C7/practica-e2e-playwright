@@ -1,0 +1,2 @@
+[     269ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o @ https://danihrndzld.github.io/practica-e2e-playwright/:0
+[     328ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://danihrndzld.github.io/favicon.ico:0

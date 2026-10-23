@@ -1,0 +1,13 @@
+# Defectos confirmados
+
+| ID | Regla incumplida | Técnica ISTQB | Pasos para reproducir | Resultado esperado según README | Resultado obtenido | Prueba automatizada relacionada |
+|---|---|---|---|---|---|---|
+| DEF-001 | El catálogo se ordena por precio ascendente y descendente. | Particiones de equivalencia | Iniciar sesión como `problema`, elegir **Precio (menor a mayor)**. | Todos los productos quedan ordenados por precio: Q25, Q60, Q75, Q140, Q225, Q350. | El catálogo permanece en el orden inicial por nombre. | `Usuario problema — catálogo conserva el orden por precio [Particiones de equivalencia]` |
+| DEF-002 | Cada producto agregado desde el catálogo debe ser ese mismo producto. | Transición de estados | Iniciar sesión como `problema`, agregar **Taza de barro** y abrir el carrito. | El carrito contiene `Taza de barro`. | El carrito contiene `Filtros de papel (100)`. | `Usuario problema — agregar Taza agrega exactamente Taza [Transición de estados]` |
+| DEF-003 | Nombre, apellido y código postal válidos permiten continuar al resumen. | Particiones de equivalencia | Iniciar sesión como `problema`, agregar un producto, completar `Ana`, `López`, `01001` y continuar. | Se abre el resumen del pedido. | Se muestra `Falta el apellido.` aunque se proporcionó. | `Usuario problema — apellido válido permite continuar [Particiones de equivalencia]` |
+| DEF-004 | Desde Q500 el descuento es 10 %. | Análisis de valores límite | Con usuario `estandar`, comprar Prensa francesa, Café de Antigua 500 g, Café de Huehuetenango 250 g y Taza de barro; subtotal Q500; continuar con datos válidos. | Descuento de 10 % (Q50.00), envío Q0.00 y total Q450.00. | Se aplica 5 % (Q25.00) y el total es Q475.00. | `Descuento — Q500 aplica 10 % [Valores límite]` |
+| DEF-005 | El cupón `ENVIOGRATIS` da envío gratis para cualquier código postal. | Tabla de decisión | Con usuario `estandar`, comprar Café de Huehuetenango 250 g, usar CP `99999` y cupón `ENVIOGRATIS`. | Envío Q0.00 y total Q75.00. | Se cobra envío Q40.00 y el total es Q115.00. | `Envío — cupón válido da envío gratis para cualquier CP [Tabla de decisión]` |
+
+## Limitación de datos alcanzables
+
+Los precios del catálogo y el rango válido de cantidades (1 a 5) hacen que todo subtotal alcanzable por interfaz sea múltiplo de Q5. Por ello Q199 y Q499 no pueden construirse mediante un flujo E2E válido sin manipular el estado de la tienda. La suite cubre esas mismas particiones con Q195 y Q490, respectivamente, y cubre los límites alcanzables Q200 y Q500.
